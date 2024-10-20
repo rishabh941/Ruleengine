@@ -1,23 +1,9 @@
 // src/components/RuleList.js
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
+import axios from 'axios';  // Add this import
 
-const RuleList = ({ setCombinedAST }) => {
-  const [rules, setRules] = useState([]);
+const RuleList = ({ setCombinedAST, rules }) => {
   const [selectedRules, setSelectedRules] = useState([]);
-
-  // Fetch all available rules from the backend
-  useEffect(() => {
-    const fetchRules = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/api/rules');
-        setRules(response.data);
-      } catch (err) {
-        console.error('Error fetching rules:', err);
-      }
-    };
-    fetchRules();
-  }, []);
 
   // Handle combining selected rules
   const handleCombine = async () => {

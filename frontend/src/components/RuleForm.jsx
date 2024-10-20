@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const RuleForm = () => {
+const RuleForm = ({ refreshRules }) => {
   const [ruleName, setRuleName] = useState('');
   const [ruleString, setRuleString] = useState('');
   const [message, setMessage] = useState('');
@@ -17,8 +17,11 @@ const RuleForm = () => {
         ruleString
       });
       setMessage('Rule successfully created!');
-      setRuleName(''); // Clear the input fields after submission
+      setRuleName('');  // Clear the input fields after submission
       setRuleString('');
+
+      // Call refreshRules to update the rule list
+      refreshRules();
     } catch (err) {
       console.error('Error creating rule:', err);
       setMessage('Error creating rule. Please check the rule format.');
