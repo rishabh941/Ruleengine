@@ -22,10 +22,10 @@ function App() {
     }
   };
 
-  // Fetch the rules when the component mounts (with an empty dependency array)
+  // Fetch the rules when the component mounts and whenever fetchRules changes
   useEffect(() => {
     fetchRules();
-  }, []); // Empty dependency array ensures this runs only once
+  }, [fetchRules]); // Include fetchRules in the dependency array
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-100 via-blue-200 to-purple-300 py-10 px-4">
