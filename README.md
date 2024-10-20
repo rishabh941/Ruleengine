@@ -33,3 +33,21 @@ This is a simple 3-tier rule engine application built with the MERN stack (Mongo
    ```bash
    git clone https://github.com/your-username/rule-engine.git
    cd rule-engine
+2. ### Set Up the Backend
+
+1. **Navigate to the backend folder**:
+   ```bash
+   cd backend
+
+   npm install
+
+   npm start
+
+2. **Navigate to the fronten folder**:
+   ```bash
+   cd frontend
+
+   npm install
+
+   npm start
+   
