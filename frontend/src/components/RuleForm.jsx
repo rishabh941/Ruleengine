@@ -14,9 +14,10 @@ const RuleForm = ({ refreshRules }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${API_URL}/create-rule`, {
+      // Removed 'response' variable to resolve the no-unused-vars warning
+      await axios.post(`${API_URL}/create-rule`, {
         ruleName,
-        ruleString
+        ruleString,
       });
       setMessage('Rule successfully created!');
       setRuleName('');  // Clear the input fields after submission
