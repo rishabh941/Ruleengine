@@ -1,4 +1,3 @@
-// routes/ruleRoutes.js
 const express = require('express');
 const router = express.Router();
 const Rule = require('../models/Rule');
@@ -123,7 +122,7 @@ router.put('/update-rule/:id', async (req, res) => {
   }
 });
 
-// API 5: Get all rules (the missing GET route)
+// API 5: Get all rules (Added to fix the 404 error)
 router.get('/', async (req, res) => {
   try {
     const rules = await Rule.find();  // Fetch all rules from the database

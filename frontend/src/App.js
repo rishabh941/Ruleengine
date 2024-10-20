@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import RuleForm from './components/RuleForm';
 import RuleList from './components/RuleList';
@@ -10,10 +9,13 @@ function App() {
   const [combinedAST, setCombinedAST] = useState(null);  // State to store the combined AST
   const [rules, setRules] = useState([]);  // State to store the fetched rules
 
+  // Base URL for the API (read from environment variable)
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/rules';
+
   // Function to fetch the rules from the backend
   const fetchRules = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/rules');
+      const response = await axios.get(`${API_URL}`);
       setRules(response.data);  // Update the state with the fetched rules
     } catch (error) {
       console.error('Error fetching rules:', error);

@@ -1,9 +1,11 @@
-// src/components/RuleList.js
 import React, { useState } from 'react';
 import axios from 'axios';  // Add this import
 
 const RuleList = ({ setCombinedAST, rules }) => {
   const [selectedRules, setSelectedRules] = useState([]);
+
+  // Base URL for the API (read from environment variable)
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/rules';
 
   // Handle combining selected rules
   const handleCombine = async () => {
@@ -13,7 +15,7 @@ const RuleList = ({ setCombinedAST, rules }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/rules/combine-rules', {
+      const response = await axios.post(`${API_URL}/combine-rules`, {
         ruleIds: selectedRules
       });
       setCombinedAST(response.data.combinedAST);  // Pass combined AST to the parent

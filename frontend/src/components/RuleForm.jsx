@@ -1,4 +1,3 @@
-// src/components/RuleForm.js
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -7,12 +6,15 @@ const RuleForm = ({ refreshRules }) => {
   const [ruleString, setRuleString] = useState('');
   const [message, setMessage] = useState('');
 
+  // Base URL for the API (read from environment variable)
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/rules';
+
   // Handle form submission to create a new rule
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/rules/create-rule', {
+      const response = await axios.post(`${API_URL}/create-rule`, {
         ruleName,
         ruleString
       });
