@@ -65,53 +65,77 @@ This is a simple 3-tier rule engine application built with the MERN stack (Mongo
    npm start
 
 ## Test Cases
+
 ### 1. Create a New Rule via the UI
-Steps:
-Open the web app in a browser.
-Navigate to the "Create Rule" section.
-Enter the following values:
-Rule Name: Age and Salary Rule
-Rule String: age > 30 AND salary > 50000
-Click the "Add Rule" button.
-Expected Behavior:
-The message "Rule successfully created!" should appear.
-The new rule should immediately be visible in the "Select Rules to Combine" section without needing a page refresh.
-2. Try to Create a Rule with Invalid Format via the UI
-Steps:
-Navigate to the "Create Rule" section.
-Enter the following values:
-Rule Name: Invalid Rule
-Rule String: age > 30 OR
-Click the "Add Rule" button.
-Expected Behavior:
-The message "Error creating rule. Please check the rule format." should appear.
-The rule should not be added to the "Select Rules to Combine" section.
-3. Combine Two Rules via the UI
-Steps:
-Create two valid rules:
-Rule 1: age > 30 AND salary > 50000
-Rule 2: experience > 5 OR department = 'Marketing'
-Navigate to the "Combine Rules" section.
-Select the two rules by clicking the checkboxes next to them.
-Click the "Combine Selected Rules" button.
-Expected Behavior:
-The rules should be combined into a new AST.
-The "Evaluate Rule" section should appear with the combined AST ready for evaluation.
-4. Evaluate Combined Rule with Valid Data via the UI
-Steps:
-After combining two rules, in the "Evaluate Rule" section, enter the following values:
-Age: 35
-Salary: 60000
-Experience: 7
-Department: Sales
-Click the "Evaluate Rule" button.
-Expected Behavior:
-The result should display as "True".
-5. Test Responsiveness of the UI
-Steps:
-Open the web app in a browser.
-Resize the browser to different screen sizes (e.g., mobile, tablet, desktop).
-Expected Behavior:
-The UI should be responsive, adjusting to different screen sizes, with no overlapping elements or broken layouts.
+
+**Steps**:
+- Open the web app in a browser.
+- Navigate to the "Create Rule" section.
+- Enter the following values:
+  - **Rule Name**: Age and Salary Rule
+  - **Rule String**: age > 30 AND salary > 50000
+- Click the "Add Rule" button.
+
+**Expected Behavior**:
+- The message "Rule successfully created!" should appear.
+- The new rule should immediately be visible in the "Select Rules to Combine" section without needing a page refresh.
+
+---
+
+### 2. Try to Create a Rule with Invalid Format via the UI
+
+**Steps**:
+- Navigate to the "Create Rule" section.
+- Enter the following values:
+  - **Rule Name**: Invalid Rule
+  - **Rule String**: age > 30 OR
+- Click the "Add Rule" button.
+
+**Expected Behavior**:
+- The message "Error creating rule. Please check the rule format." should appear.
+- The rule should not be added to the "Select Rules to Combine" section.
+
+---
+
+### 3. Combine Two Rules via the UI
+
+**Steps**:
+- Create two valid rules:
+  - **Rule 1**: age > 30 AND salary > 50000
+  - **Rule 2**: experience > 5 OR department = 'Marketing'
+- Navigate to the "Combine Rules" section.
+- Select the two rules by clicking the checkboxes next to them.
+- Click the "Combine Selected Rules" button.
+
+**Expected Behavior**:
+- The rules should be combined into a new AST.
+- The "Evaluate Rule" section should appear with the combined AST ready for evaluation.
+
+---
+
+### 4. Evaluate Combined Rule with Valid Data via the UI
+
+**Steps**:
+- After combining two rules, in the "Evaluate Rule" section, enter the following values:
+  - **Age**: 35
+  - **Salary**: 60000
+  - **Experience**: 7
+  - **Department**: Sales
+- Click the "Evaluate Rule" button.
+
+**Expected Behavior**:
+- The result should display as "True".
+
+---
+
+### 5. Test Responsiveness of the UI
+
+**Steps**:
+- Open the web app in a browser.
+- Resize the browser to different screen sizes (e.g., mobile, tablet, desktop).
+
+**Expected Behavior**:
+- The UI should be responsive, adjusting to different screen sizes, with no overlapping elements or broken layouts.
+
 
    
