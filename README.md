@@ -20,6 +20,17 @@ This is a simple 3-tier rule engine application built with the MERN stack (Mongo
 - **Database**: MongoDB
 - **API Testing**: Postman or any REST client can be used for testing the API endpoints.
 
+## Screenshots
+
+### Create a New Rule
+![Create Rule](./screenshots/Screenshot 2024-10-20 114808.png)
+
+### Combine Rules
+![Combine Rules](./screenshots/Screenshot 2024-10-20 115002.png)
+
+### Evaluate Rule
+![Evaluate Rule](./screenshots/Screenshot 2024-10-20 115010.png)
+
 ## Installation
 
 ### Prerequisites
