@@ -23,13 +23,14 @@ This is a simple 3-tier rule engine application built with the MERN stack (Mongo
 ## Screenshots
 
 ### Create a New Rule
-![Create Rule](./screenshots/Screenshot-2024-10-20-114808.png)
+![Create Rule](./screenshots/Screenshot%202024-10-20%20114808.png)
 
 ### Combine Rules
-![Combine Rules](./screenshots/Screenshot-2024-10-20-115002.png)
+![Combine Rules](./screenshots/Screenshot%202024-10-20%20115002.png)
 
 ### Evaluate Rule
-![Evaluate Rule](./screenshots/Screenshot-2024-10-20-115010.png)
+![Evaluate Rule](./screenshots/Screenshot%202024-10-20%20115010.png)
+
 
 
 ## Installation
